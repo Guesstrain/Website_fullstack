@@ -1,0 +1,11 @@
+<!-- templates/blog.html -->
+{{ define "content" }}
+<h1>{{ .Title }}</h1>
+{{ range .Posts }}
+    <article>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Content }}</p>
+        <small>{{ .Date }}</small>
+    </article>
+{{ end }}
+{{ end }}

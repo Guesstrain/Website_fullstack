@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .content {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">{{ .Title }}</h1>
+        <div class="content">{{ .Content }}</div>
+        <img class="image" src="{{ .ImageURL }}" alt="Article Image">
+    </div>
+</body>
+</html>
