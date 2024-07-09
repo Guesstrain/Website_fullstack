@@ -22,7 +22,7 @@ type database struct {
 }
 
 func NewDatabaseService() DatabaseService {
-	dsn := "root:password@tcp(127.0.0.1:3306)/website?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:password@tcp(mysqlc:3306)/website?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println(err)
